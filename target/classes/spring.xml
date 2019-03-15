@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<beans 
+    xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+	
+	<!-- Below are xml configuration for injecting the dependencies of bean, when required -->
+	<!-- <bean id="VehicleCar" class="com.ge.in.app.Car"></bean> -->
+	<!--<bean id="VehicleBike" class="com.ge.in.app.Bike"></bean  -->
+	
+	<!-- Injecting dependencies through Annotation -->
+	<!-- <context:component-scan base-package="com.ge.in.dependencyInjectionThroughAnnotation"></context:component-scan> -->
+	
+	<!-- <bean id="Car" class="com.amit.in.Car"></bean>
+	<bean id="Bike" class="com.amit.in.Bike"></bean>
+	
+	<bean id="Tyre" class="com.amit.in.Tyre"> -->
+	<!-- Below line represents Setter injection -->
+	<bean id="Snapdragon" class="com.annospring.in.annotationBasedSpring">
+	<!--property name="brand" value="Ceat"></property -->     <!-- using setter injection -->
+	<constructor-arg value="1"></constructor-arg>     <!-- using constructor injection -->
+	</bean>
+	
+	<bean id="Mediatek" class="com.annospring.in.annotationBasedSpring">
+	<!--property name="brand" value="Ceat"></property -->     <!-- using setter injection -->
+	<constructor-arg value="2"></constructor-arg>     <!-- using constructor injection -->
+	</bean>
+	
+	
+	
+</beans>
